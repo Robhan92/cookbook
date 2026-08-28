@@ -1,0 +1,25 @@
+{
+  "name": "snippetbox",
+  "version": "1.0.0",
+  "description": "Share and manage code snippets. Built with Express, Mongoose and EJS.",
+  "homepage": "https://github.com/Robhan92/snippetbox#readme",
+  "bugs": {
+    "url": "https://github.com/Robhan92/snippetbox/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robhan92/snippetbox.git"
+  },
+  "license": "MIT",
+  "author": "Robin",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "mongoose": "^9.9.4"
+  }
+}
