@@ -4,7 +4,8 @@ import dotenv from "dotenv";
 
 dotenv.config({ path: "secret.env", quiet: true });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+const CONNECTION_STRING = process.env.CONNECTION_STRING;
 
 const app = express();
 
@@ -18,7 +19,7 @@ app.get('/', (req, res) => {
  * Connect to Database before listening to PORT.
  */
 mongoose
-  .connect(process.env.CONNECTION_STRING)
+  .connect(CONNECTION_STRING)
   .then(() => {
     console.log("Successfully connected to the database.");
     app.listen(PORT, () => {
