@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import express from "express";
 import dotenv from "dotenv";
+import createError from "http-errors"
 
 dotenv.config({ path: "secret.env", quiet: true });
 
@@ -11,9 +12,12 @@ const app = express();
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello World')
-})
+/**
+ * Testing
+ */
+app.use((err, req, res, next) => {
+  res.status(500).send('Something broke!');
+});
 
 /*
  * Connect to Database before listening to PORT.
