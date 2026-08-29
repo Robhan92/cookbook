@@ -1,14 +1,14 @@
 {
-  "name": "snippetbox",
+  "name": "cookbook",
   "version": "1.0.0",
-  "description": "Share and manage code snippets. Built with Express, Mongoose and EJS.",
-  "homepage": "https://github.com/Robhan92/snippetbox#readme",
+  "description": "Share and manage recipes. Built with Express, Mongoose and EJS.",
+  "homepage": "https://github.com/Robhan92/cookbook#readme",
   "bugs": {
-    "url": "https://github.com/Robhan92/snippetbox/issues"
+    "url": "https://github.com/Robhan92/cookbook/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Robhan92/snippetbox.git"
+    "url": "git+https://github.com/Robhan92/cookbook.git"
   },
   "license": "MIT",
   "author": "Robin",
@@ -21,6 +21,7 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "http-errors": "^2.0.1",
     "mongoose": "^9.9.4"
   }
 }
