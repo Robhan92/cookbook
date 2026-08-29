@@ -16,12 +16,23 @@
   "main": "app.js",
   "scripts": {
     "start": "node src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "eslint": "npx eslint . || exit 0",
+    "eslint:fix": "npx eslint . --fix || exit 0",
+    "stylelint": "npx stylelint **/.css || exit 0",
+    "stylelint:fix": "npx stylelint --fix **/.css || exit 0",
+    "lint": "npm run eslint && npm run stylelint"
   },
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "http-errors": "^2.0.1",
     "mongoose": "^9.9.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.9.1",
+    "globals": "^17.11.0",
+    "stylelint": "^17.14.1",
+    "stylelint-config-standard": "^40.0.0"
   }
 }
