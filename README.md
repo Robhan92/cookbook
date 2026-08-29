@@ -1,6 +1,15 @@
-# cookbook
+# Cookbook
 
-Share and manage recipes. Built with Express, Mongoose and EJS.
+CRUD-application for managing and sharing recipes.
+
+## Built with
+
+- Node
+- Express
+- MongoDB (Mongoose)
+- EJS
+- Tailwind
+
 ___
 
 ## ER diagram
@@ -31,5 +40,6 @@ erDiagram
 }
 ```
 
-> All nutritional values are per 100 g. Amounts are in grams.
+- **All** nutritional values are per 100 g. Amounts are in **grams**.
+
 ___
