@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/css/output.css" rel="stylesheet">
+  <link href="/css/styles.css" rel="stylesheet">
 </head>
 <%- include('../partials/header.ejs') -%>
-<body>
-  <h1 class="text-2xl font-bold underline">
+<body class="container">
+  <h2>
     Hello world!
-  </h1>
+  </h2>
   <form action="/create" method="POST">
     <p><input type="text" name="username" value="" placeholder="Enter a username">
     </p>

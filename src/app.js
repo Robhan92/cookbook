@@ -5,7 +5,8 @@ import { fileURLToPath } from 'url'
 import path from 'path'
 import session from 'express-session'
 import logger from 'morgan'
-import authRouter from "./routes/authRouter.js";
+import authRouter from "./routes/authRouter.js"
+import pageRouter from "./routes/pageRouter.js"
 import createError from "http-errors"
 
 dotenv.config({ path: "secret.env", quiet: true });
@@ -34,6 +35,7 @@ app.use(session({
 }
 ))
 
+app.use(pageRouter)
 app.use(authRouter)
 
 /*

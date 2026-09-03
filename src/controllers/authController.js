@@ -2,10 +2,6 @@ import Usermodel from '../models/userModel.js'
 
 const authController = {}
 
-authController.showIndex = (req, res) => {
-  res.render('pages/index.ejs')
-}
-
 // Create
 authController.create = async (req, res, next) => {
   try {
