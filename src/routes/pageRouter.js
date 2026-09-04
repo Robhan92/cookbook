@@ -5,7 +5,7 @@ const pageRouter = express.Router()
 
 pageRouter.get('/', pageController.showIndex)
 pageRouter.get('/about', pageController.showAbout)
-// recipes
-// contact
+pageRouter.get('/recipes', pageController.showRecipes)
+pageRouter.get('/contact', pageController.showContact)
 
 export default pageRouter
