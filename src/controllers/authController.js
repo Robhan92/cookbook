@@ -2,11 +2,10 @@ import Usermodel from '../models/userModel.js'
 
 const authController = {}
 
-// Create
-authController.create = async (req, res, next) => {
+// Register
+authController.register = async (req, res, next) => {
   try {
       const existing = await Usermodel.findOne({ username: req.body.username })
-      console.log(res.locals)
       if (!existing) {
       const newUser = new Usermodel({
         username: req.body.username,
@@ -15,11 +14,22 @@ authController.create = async (req, res, next) => {
       await newUser.save()
       res.redirect('/')
     } else {
-      console.log("user found")
+      console.log("user found") // REMOVE
+      res.redirect('/')
     }
   } catch (err) {
     next(err)
   }
+}
+
+// Login
+authController.login = async (req, res, next) => {
+  try {
+    
+  } catch (err) {
+    next(err)
+  }
+  
 }
 
 authController.remove = (req, res) => {

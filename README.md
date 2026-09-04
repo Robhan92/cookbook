@@ -8,7 +8,6 @@ CRUD-application for managing and sharing recipes.
 - Express
 - MongoDB (Mongoose)
 - EJS
-- Tailwind
 
 ___
 
