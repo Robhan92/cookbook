@@ -6,6 +6,7 @@ const authController = {}
 authController.register = async (req, res, next) => {
   try {
       const existing = await Usermodel.findOne({ username: req.body.username })
+      console.log(existing)
       if (!existing) {
       const newUser = new Usermodel({
         username: req.body.username,
@@ -14,7 +15,6 @@ authController.register = async (req, res, next) => {
       await newUser.save()
       res.redirect('/')
     } else {
-      console.log("user found") // REMOVE
       res.redirect('/')
     }
   } catch (err) {
@@ -25,14 +25,22 @@ authController.register = async (req, res, next) => {
 // Login
 authController.login = async (req, res, next) => {
   try {
-    
+    //const existing = await Usermodel.findOne({ username: req.body.username })
+    //if (existing) {
   } catch (err) {
     next(err)
   }
   
 }
 
+// Delete
 authController.remove = (req, res) => {
+  try {
+    
+  } catch (err) {
+    next(err)
+    
+  }
 
 }
 

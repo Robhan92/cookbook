@@ -5,10 +5,8 @@ import { fileURLToPath } from 'url'
 import path from 'path'
 import session from 'express-session'
 import logger from 'morgan'
-import authRouter from "./routes/authRouter.js"
-import pageRouter from "./routes/pageRouter.js"
-import passport from "passport"
-import createError from "http-errors"
+import authRouter from "./routes/auth.js"
+import pageRouter from "./routes/main.js"
 
 dotenv.config({ path: "secret.env", quiet: true });
 
