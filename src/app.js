@@ -7,7 +7,7 @@ import session from 'express-session'
 import logger from 'morgan'
 import authRouter from "./routes/authRouter.js"
 import pageRouter from "./routes/pageRouter.js"
-import passport from "passport-http-bearer"
+import passport from "passport"
 import createError from "http-errors"
 
 dotenv.config({ path: "secret.env", quiet: true });
@@ -27,9 +27,12 @@ app.use(logger('dev'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static(path.join(directoryPath, 'public')))
-app.use(passport.initialize());
-app.use(passport.session());
-
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false
+}
+))
 
 app.use(pageRouter)
 app.use(authRouter)
